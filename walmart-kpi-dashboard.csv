@@ -1,0 +1,28 @@
+,,,,
+, 📊 Descripción del analisis ,,,
+,Este archivo presenta el análisis de ventas 2012 para identificar eficiencia y contribución por departamento.,,,
+,,,,
+,,,,
+,,,,
+,📑 Tablas Incluidas,,,
+,Hoja,Descripción,Tipo de hoja,
+,raw_ventas,"Datos originales de ventas semanales, por tienda y departamento.",Raw Data,
+,raw_departamento,Catálogo de departamentos con sus nombres.,Lookup,
+,raw_tiendas,Catálogo de tiendas con tipo (A/B) y tamaño en m².,Lookup,
+,dates_clean,"Datos depurados con uniones de catálogos (dept, tienda), semana estandarizada y nombre de depto.",Clean Data,
+,Pivot,"Contiene las tablas dinámicas que procesan los datos de dates_clean (ventas por departamento, m² y participación).",Analysis,
+,Dashboard,Interfaz visual interactiva con segmentadores (filtros) y KPIs clave para la toma de decisiones rápida.,Presentation,
+,Resumen,"Espacio dedicado a los gráficos dinámicos (Barras, Pareto, Líneas de tiempo) que alimentan al Dashboard.",Visualization,
+,,,,
+,,,,
+,📊 KPIs y Fórmulas,,,
+,KPI,Descripción,Fórmula en Sheets,Interpretación
+,Ventas por m²,Ventas ajustadas por tamaño de tienda,Ventas Totales /(promedio) tamaño,Entre mas alta la cifra mas eficiencia por metro cuadrado
+,Porcentaje de participación,Representa la contribución de un departamento específico al total de ventas de la empresa.,nombre_dept = SUM of ventas_semanales,"Indica qué proporción del ingreso total genera cada área. Ayuda a identificar los ""motores"" del negocio (los que tienen mayor %) frente a los departamentos de nicho."
+,,,,
+,,,,
+,✅ QA / Validaciones,,,
+,Chequeo,Cómo verificar,Formula,Resultado
+,¿Existen tiendas sin departamento asignado?,Filtrar columna Dept = vacío.,"""=CONTAR.SI(clean_ventas!I:I,""no tiene departamento"")""",6391
+,¿Ventas negativas o nulas?,Buscar valores < 0 utilizando un COUNTIF,"=CONTAR.SI(dates_clean!I:I,""<0"")'",27
+,¿Tamaños en m² con valor 0?,Revisar que no sean 0 o vacíos.,"=CONTAR.SI(raw_tiendas!C:C,""<0"":"""")'",0
