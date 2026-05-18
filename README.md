@@ -280,15 +280,8 @@ HALLAZGO 3: Departamentos de Oportunidad
 walmart-kpi-dashboard/
 ├── README.md (este archivo)
 ├── walmart-data.csv (datos limpios consolidados)
-├── walmart-dashboard-preview.png (captura del dashboard)
-├── Archivos opcionales:
-│   ├── pivot-eficiencia.png (tabla dinámica KPI 1)
-│   ├── pivot-participacion.png (tabla dinámica KPI 2)
-│   └── kpi-charts.png (gráficos del dashboard)
-└── DOCUMENTACIÓN:
-    - Metodología de cálculo KPIs
-    - Manual del usuario
-    - Validaciones QA
+└── walmart-dashboard-preview.pdf (captura del dashboard)
+
 ```
 
 ---
@@ -316,7 +309,7 @@ walmart-kpi-dashboard/
 
 ## 📈 VISUALIZACIONES RECOMENDADAS
 
-### PNG 1: `walmart-dashboard-preview.png`
+### PDF 1: `walmart-dashboard-preview.pdf`
 Captura del dashboard mostrando:
 ```
 ┌──────────────────────────────────────────────┐
@@ -332,7 +325,7 @@ Captura del dashboard mostrando:
 └──────────────────────────────────────────────┘
 ```
 
-### PNG 2: `pivot-eficiencia.png`
+###  2: `pivot-eficiencia.png`
 Tabla dinámica de KPI 1 mostrando:
 ```
 nombre_dept              | SUM ventas | AVG tamaño | Venta/m²
@@ -343,7 +336,7 @@ Bebidas                | 38.1M      | 78,534     | $485.30
 ...
 ```
 
-### PNG 3: `kpi-charts.png`
+###  3: `kpi-charts.png`
 Ambos gráficos juntos mostrando:
 - Barras: Eficiencia por departamento
 - Barras Apiladas: Participación
@@ -540,7 +533,7 @@ Largo Plazo (3-6 meses):
 
 ## 📞 CONTACTO
 
-- **Fecha de realización:** Mayo 2026
+- **Fecha de realización:** Febrero 2026
 - **Duración total:** ~2 horas
 - **Bootcamp:** TripleTen Data Analysis
 - **Nivel de dificultad:** Intermedio-Avanzado
